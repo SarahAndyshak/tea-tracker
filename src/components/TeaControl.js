@@ -74,9 +74,9 @@ class TeaControl extends React.Component {
     this.setState({mainTeaList: newMainTeaList});
   }
 
-  handleRestockClick = (id, stock) => {
+  handleRestockClick = (id) => {
     let selectedTea = this.state.mainTeaList.find(tea => tea.id === id);
-    selectedTea.inventory += stock;
+    selectedTea.inventory += 130;
     const newMainTeaList = this.state.mainTeaList.map((tea => { return tea.id === id? selectedTea : tea}));
     this.setState({mainTeaList: newMainTeaList});
   }
