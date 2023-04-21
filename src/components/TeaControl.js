@@ -103,7 +103,7 @@ class TeaControl extends React.Component {
       onBuyTea = { this.handleBuyClick}
       onRestockTea = {this.handleRestockClick}
       onTeaSelect={this.handleChangingSelectedTea}   />;
-      buttonText = "Add Tea"; 
+      buttonText = "Add a new Tea"; 
     }
     return (
       <React.Fragment>

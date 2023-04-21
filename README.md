@@ -5,10 +5,10 @@
 #### By: Sarah Andyshak
 
 #### 🫖 [Technologies Used](#technologies-used)
-#### 🫖 [Component Diagram](#component-diagram)
-#### 🫖 [Setup / Installation](#setup-and-installation)
-#### 🫖 [Known Bugs](#known-bugs)
-#### 🫖 [License](#license)
+#### ☕ [Component Diagram](#component-diagram)
+#### 🧋 [Setup / Installation](#setup-and-installation)
+#### 🍵 [Known Bugs](#known-bugs)
+#### 🫖 [License](#license) 
 
 ## Technologies Used
 * React
@@ -26,13 +26,13 @@
 ```
 App.js
 ├── Header.js
-├── BirdControl.js
-│   ├── NewBirdForm.js
+├── TeaControl.js
+│   ├── NewTeaForm.js
 │   │   ├── ReusableForm.js
-│   ├── BirdList.js   
-│   │   ├── Bird.js
-│   ├── BirdDetail.js   
-│   ├── EditBirdForm.js            
+│   ├── TeaList.js   
+│   │   ├── Tea.js
+│   ├── TeaDetail.js   
+│   ├── EditTeaForm.js            
 ```
 
 # Getting Started with Create React App
@@ -54,7 +54,7 @@ git clone https://github.com/SarahAndyshak/tea-tracker.git
 
 ## Known Bugs
 
-* As of 21 April 2023, no known bugs.
+* There's a bug with the incrementing function: the Restock button only increments by 130, as it should, but sometimes passes the "130" as a string, when the user clicks restock twice before buying an amount. The number on the dropdown are unnecessary.
 
 ## License
 

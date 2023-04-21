@@ -10,8 +10,8 @@ function NewTeaForm(props){
       name: event.target.name.value,
       origin: event.target.origin.value,
       caf: event.target.caf.value,
-      price: event.target.price.value,
-      inventory: event.target.inventory.value,
+      price: parseInt(event.target.price.value),
+      inventory: parseInt(event.target.inventory.value),
       id: v4()
     });
   }
@@ -20,7 +20,7 @@ function NewTeaForm(props){
     <React.Fragment>
       <ReusableForm
         formSubmissionHandler={handleNewTeaFormSubmission}
-        className="btn btn-light" buttonText="Add Tea" />
+        className="btn btn-light" buttonText="Add a new Tea" />
     </React.Fragment>
   );
 }

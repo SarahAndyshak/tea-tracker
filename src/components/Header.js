@@ -5,6 +5,7 @@ function Header(){
     <React.Fragment>
       <h1>Tea Tracker</h1>
       <p>Keep track of shop inventory!</p>
+      <hr />
     </React.Fragment>
   );
 }

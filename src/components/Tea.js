@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Toast from 'react-bootstrap/Toast';
 
 function Tea(props){
 
@@ -24,19 +25,23 @@ function Tea(props){
     <p>Caf/Decaf: {props.caf}</p>
     <p>Price per oz: ${props.price}</p>
     <p>Inventory available in oz: {props.inventory}</p>
-    <button className="btn btn-block btn-lg btn-dark" onClick={handleClick}>Buy</button>
+    <button className="btn btn-block btn-lg btn-dark" onClick={handleClick}>Buy: 1 oz</button>
     </>
   }
 
   return (
     <React.Fragment>
+      <Toast className="mb-4">
+      <Toast.Header closeButton={false}>
       <div onClick={() => props.onTeaSelect(props.id)}>
       {teaDisplay}
       </div>
       <form onSubmit={handleSubmit}>
         <input type="number" min="1" max="130" name="inventory" className="form-control" />
-        <button className="btn btn-outline-dark">Restock</button>
+        <button className="btn btn-outline-dark">Restock: new crate</button>
       </form>
+      </Toast.Header>
+      </Toast>
     </React.Fragment>
   );
 }
@@ -45,7 +50,7 @@ Tea.propTypes = {
   name: PropTypes.string,
   origin: PropTypes.string,
   caf: PropTypes.string,
-  price: PropTypes.string,
+  price: PropTypes.number,
   inventory: PropTypes.number,
   id: PropTypes.string,
   onBuyTea: PropTypes.func,
