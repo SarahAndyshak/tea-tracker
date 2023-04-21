@@ -10,8 +10,8 @@ function TeaDetail(props){
       <h3>Name: {tea.name}</h3>
       <p>Origin: {tea.origin}</p>
       <p>Caf/Decaf: {tea.caf}</p>
-      <p>Price: ${tea.price}</p>
-      <p>Inventory: {tea.inventory}</p>
+      <p>Price per oz: ${tea.price}</p>
+      <p>Inventory available in oz: {tea.inventory}</p>
       <button className="btn btn-light" onClick={ props.onClickingEdit }>Update inventory</button>
       <br />
       <button className="btn btn-light" onClick={()=> onClickingDelete(tea.id) }>Delete this tea</button>

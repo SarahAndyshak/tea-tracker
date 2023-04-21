@@ -21,7 +21,7 @@ function ReusableForm(props){
           placeholder='Caf or Decaf' />
 
         <input
-          type='number'
+          type='text'
           name='price'
           placeholder='$1' />
 

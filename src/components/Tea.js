@@ -22,7 +22,7 @@ function Tea(props){
     <h3>Name: {props.name}</h3>
     <p>Origin: {props.origin}</p>
     <p>Caf/Decaf: {props.caf}</p>
-    <p>Price: ${props.price}</p>
+    <p>Price per oz: ${props.price}</p>
     <p>Inventory available in oz: {props.inventory}</p>
     <button className="btn btn-block btn-lg btn-dark" onClick={handleClick}>Buy</button>
     </>

@@ -28,7 +28,7 @@ TeaList.propTypes = {
   onBuyTea: PropTypes.func,
   onRestockTea: PropTypes.func,
   onTeaSelct: PropTypes.func,
-  onTeaSelection: PropTypes.func
+  // onTeaSelection: PropTypes.func
 }
 
 export default TeaList;
