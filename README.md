@@ -54,7 +54,7 @@ git clone https://github.com/SarahAndyshak/tea-tracker.git
 
 ## Known Bugs
 
-* App functionality is currently very limited due to static-only state being utilized.
+* As of 21 April 2023, no known bugs.
 
 ## License
 
