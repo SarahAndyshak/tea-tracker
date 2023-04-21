@@ -8,22 +8,22 @@ function TeaList(props){
   return(
     <React.Fragment>
       <Row>
-      <Col>
         {props.teaList.map((tea) =>
-        <Tea
-          // whenTeaClicked = { props.onTeaSelection }
-          name = {tea.name}
-          origin = {tea.origin}
-          caf = {tea.caf}
-          price = {tea.price}
-          inventory = {tea.inventory}
-          onBuyTea = {props.onBuyTea}
-          onRestockTea = {props.onRestockTea}
-          onTeaSelect = {props.onTeaSelect}
-          id = {tea.id}
-          key = {tea.id} />
+        <Col md={4} className="mb-4">
+          <Tea
+            // whenTeaClicked = { props.onTeaSelection }
+            name = {tea.name}
+            origin = {tea.origin}
+            caf = {tea.caf}
+            price = {tea.price}
+            inventory = {tea.inventory}
+            onBuyTea = {props.onBuyTea}
+            onRestockTea = {props.onRestockTea}
+            onTeaSelect = {props.onTeaSelect}
+            id = {tea.id}
+            key = {tea.id} />
+          </Col>
         )}
-        </Col>
       </Row>
     </React.Fragment>
   );

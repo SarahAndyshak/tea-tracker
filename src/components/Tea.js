@@ -25,7 +25,7 @@ function Tea(props){
     <p>Caf/Decaf: {props.caf}</p>
     <p>Price per oz: ${props.price}</p>
     <p>Inventory available in oz: {props.inventory}</p>
-    <button className="btn btn-block btn-lg btn-dark" onClick={handleClick}>Buy: 1 oz</button>
+    <button className="btn btn-success" onClick={handleClick}>Buy: 1 oz</button>
     </>
   }
 
@@ -38,7 +38,7 @@ function Tea(props){
       </div>
       <form onSubmit={handleSubmit}>
         <input type="number" min="1" max="130" name="inventory" className="form-control" />
-        <button className="btn btn-outline-dark">Restock: new crate</button>
+        <button className="btn btn-outline-success">Restock: new crate</button>
       </form>
       </Toast.Header>
       </Toast>

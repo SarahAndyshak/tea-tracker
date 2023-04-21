@@ -3,7 +3,6 @@ import NewTeaForm from './NewTeaForm';
 import TeaList from './TeaList';
 import EditTeaForm from './EditTeaForm';
 import TeaDetail from './TeaDetail';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 class TeaControl extends React.Component {
 
@@ -108,7 +107,8 @@ class TeaControl extends React.Component {
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        <button className="btn btn-secondary" onClick={this.handleClick}>{buttonText}</button> 
+        <button className="btn btn-outline-success" onClick={this.handleClick}>{buttonText}</button> 
+      
       </React.Fragment>
     );
   }

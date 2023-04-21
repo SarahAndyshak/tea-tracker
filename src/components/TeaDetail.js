@@ -12,9 +12,9 @@ function TeaDetail(props){
       <p>Caf/Decaf: {tea.caf}</p>
       <p>Price per oz: ${tea.price}</p>
       <p>Inventory available in oz: {tea.inventory}</p>
-      <button className="btn btn-light" onClick={ props.onClickingEdit }>Update inventory</button>
+      <button className="btn btn-outline-success" onClick={ props.onClickingEdit }>Update inventory</button>
       <br />
-      <button className="btn btn-light" onClick={()=> onClickingDelete(tea.id) }>Delete this tea</button>
+      <button className="btn btn-outline-success" onClick={()=> onClickingDelete(tea.id) }>Delete this tea</button>
       <hr/>
     </React.Fragment>
   );

@@ -30,7 +30,7 @@ function ReusableForm(props){
           name='inventory'
           placeholder='1' />
 
-        <button className="btn btn-light" type='submit'>{props.buttonText}</button>
+        <button className="btn btn-outline-success" type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>
   );

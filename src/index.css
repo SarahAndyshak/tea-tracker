@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
 
 body {
-  margin: 0;
+  margin-bottom: 10px;
   font-family: 'Berkshire Swash', cursive;
+  color: rgb(32, 99, 32);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

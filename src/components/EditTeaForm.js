@@ -11,8 +11,8 @@ function EditTeaForm(props){
       name: event.target.name.value,
       origin: event.target.origin.value,
       caf: event.target.caf.value,
-      price: parseInt(event.target.price.value),
-      inventory: parseInt(event.target.inventory.value),
+      price: event.target.price.value,
+      inventory: event.target.inventory.value,
       id: tea.id
     });
   }
@@ -20,7 +20,7 @@ function EditTeaForm(props){
   return(
     <React.Fragment>
       <ReusableForm formSubmissionHandler={handleEditTeaFormSubmission}
-      className="btn btn-light" buttonText="Update Tea Info" />
+      className="btn btn-outline-success" buttonText="Update Tea Info" />
     </React.Fragment>
   );
 }
