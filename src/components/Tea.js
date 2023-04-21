@@ -45,7 +45,7 @@ Tea.propTypes = {
   name: PropTypes.string,
   origin: PropTypes.string,
   caf: PropTypes.string,
-  price: PropTypes.number,
+  price: PropTypes.string,
   inventory: PropTypes.number,
   id: PropTypes.string,
   onBuyTea: PropTypes.func,
