@@ -1,11 +1,11 @@
-import React from "react";
-import NewTeaForm from "./NewTeaForm";
-import EditTeaForm from "./EditTeaForm";
-import TeaList from "./TeaList";
-import TeaDetail from "./TeaDetail";
+import React from 'react';
+import NewTeaForm from './NewTeaForm';
+import TeaList from './TeaList';
+import EditTeaForm from './EditTeaForm';
+import TeaDetail from './TeaDetail';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-class TeaControl extends React.Component{
+class TeaControl extends React.Component {
 
   constructor(props) {
     super(props);
@@ -51,11 +51,11 @@ class TeaControl extends React.Component{
       mainTeaList: editedMainTeaList,
       editing: false,
       selectedTea: null
-    })
+    });
   }
 
   handleAddingNewTeaToList = (newTea) => {
-    console.log("Adding Tea reached");
+    console.log("adding tea");
     const newMainTeaList = this.state.mainTeaList.concat(newTea);
     this.setState({mainTeaList: newMainTeaList});
     this.setState({formVisibleOnPage: false});
@@ -66,54 +66,53 @@ class TeaControl extends React.Component{
     this.setState({selectedTea: selectedTea});
   }
 
-  //logic to decrement inventory
   handleBuyClick = (id) => {
-    let selectedTea = this.state.mainTeaList.find(item => item.id === id);
-    selectedTea.inventory -=1;
-    const newMainTeaList = this.state.mainTeaList.map((tea) => {return tea.id === id ? selectedTea : tea});
-    console.log(selectedTea.inventory);
+    let selectedTea = this.state.mainTeaList.find(tea => tea.id === id);
+    selectedTea.quantity -= 1;
+    const newMainTeaList = this.state.mainTeaList.map((tea) => { return tea.id === id ? selectedTea : tea});
+    console.log(selectedTea.quantity);
     this.setState({mainTeaList: newMainTeaList});
   }
 
-  //logic to add to inventory
   handleRestockClick = (id, stock) => {
     let selectedTea = this.state.mainTeaList.find(tea => tea.id === id);
-    selectedTea.inventory += stock;
-    const newMainTeaList = this.state.mainTeaList.map((tea => {return tea.id === id ? selectedTea : tea}));
+    selectedTea.quantity += stock;
+    const newMainTeaList = this.state.mainTeaList.map((tea => { return tea.id === id? selectedTea : tea}));
     this.setState({mainTeaList: newMainTeaList});
   }
 
   render() {
     let currentlyVisibleState = null;
-    let buttonText = null;
-    if (this.state.editing) {
-      currentlyVisibleState = <EditTeaForm tea = {this.state.selectedTea} 
-      onEditTea = {this.handleEditingTeaInList} />
-      buttonText = "Return to list of Teas";
+    let buttonText = null; 
+    if (this.state.editing ) {      
+      currentlyVisibleState = <EditTeaForm tea = {this.state.selectedTea} onEditTea = {this.handleEditingTeaInList} />
+      buttonText = "Return to List of Teas";
     } else if (this.state.selectedTea != null) {
-      currentlyVisibleState = <TeaDetail tea = {this.state.selectedTea}
+      currentlyVisibleState = <TeaDetail 
+      tea={this.state.selectedTea} 
       onClickingDelete={this.handleDeletingTea}
-      onClickingEdit={this.handleEditClick} />
-      buttonText = "Return to list of Teas";
+      onClickingEdit = {this.handleEditClick} />
+      buttonText = "Return to Tea List";
     } else if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <NewTeaForm onNewTeaCreation={this.handleAddingNewTeaToList} />;
-      buttonText = "Return to list of Teas";
-    } else { 
+      currentlyVisibleState = <NewTeaForm onNewTeaCreation={this.handleAddingNewTeaToList}/>;
+      buttonText = "Return to Tea List"; 
+    } else {
       currentlyVisibleState = <TeaList 
-      tea = {this.state.selectedTea}
-      teaList = {this.state.mainTeaList}
-      onBuyItem = {this.handleBuyClick}
+      tea={this.state.selectedTea} 
+      teaList={this.state.mainTeaList}
+      onBuyTea = { this.handleBuyClick}
       onRestockTea = {this.handleRestockClick}
-      onTeaSelect = {this.handleChangingSelectedTea} />;
-      buttonText = "Add Item";
+      onTeaSelect={this.handleChangingSelectedTea}   />;
+      buttonText = "Add Tea"; 
     }
-      return (
-        <React.Fragment>
-          {currentlyVisibleState}
-          <button class="btn btn-secondary" onClick={this.handleClick}>{buttonText}</button>
-        </React.Fragment>
-      );
+    return (
+      <React.Fragment>
+        {currentlyVisibleState}
+        <button className="btn btn-secondary" onClick={this.handleClick}>{buttonText}</button> 
+      </React.Fragment>
+    );
   }
+
 }
 
 export default TeaControl;

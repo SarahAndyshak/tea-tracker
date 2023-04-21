@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 function ReusableForm(props){
   return(
     <React.Fragment>
-      <form on Submit={props.formSubmissionHandler}>
+      <form onSubmit={props.formSubmissionHandler}>
         <input 
           type='text'
           name='name'
@@ -30,7 +30,7 @@ function ReusableForm(props){
           name='inventory'
           placeholder='1' />
 
-        <button class="btn btn-light" type='submit'>{props.buttonText}</button>
+        <button className="btn btn-light" type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>
   );

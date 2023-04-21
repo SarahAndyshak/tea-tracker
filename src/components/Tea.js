@@ -10,7 +10,7 @@ function Tea(props){
   function handleSubmit(event) {
     event.preventDefault();
     console.log(event.target.inventory.value);
-    return props.onRestockItem(props.id, parseInt(event.target.inventory.value));
+    return props.onRestockTea(props.id, parseInt(event.target.inventory.value));
   }
 
   let teaDisplay = null;
@@ -22,8 +22,8 @@ function Tea(props){
     <h3>Name: {props.name}</h3>
     <p>Origin: {props.origin}</p>
     <p>Caf/Decaf: {props.caf}</p>
-    <p>Price: {props.price}</p>
-    <p>Inventory: {props.inventory}</p>
+    <p>Price: ${props.price}</p>
+    <p>Inventory available in oz: {props.inventory}</p>
     <button className="btn btn-block btn-lg btn-dark" onClick={handleClick}>Buy</button>
     </>
   }
@@ -39,17 +39,6 @@ function Tea(props){
       </form>
     </React.Fragment>
   );
-
-  //original fragment to return
-  // return(
-  //   <React.Fragment>
-  //     <h3>Name: {props.name}</h3>
-  //     <p>Origin: {props.origin}</p>
-  //     <p>Caf/Decaf: {props.caf}</p>
-  //     <p>Price: {props.price}</p>
-  //     <p>Inventory: {props.inventory}</p>
-  //   </React.Fragment>
-  // );
 }
 
 Tea.propTypes = {

@@ -20,7 +20,7 @@ function EditTeaForm(props){
   return(
     <React.Fragment>
       <ReusableForm formSubmissionHandler={handleEditTeaFormSubmission}
-      class="btn btn-light" buttonText="Update Tea" />
+      className="btn btn-light" buttonText="Update Tea" />
     </React.Fragment>
   );
 }

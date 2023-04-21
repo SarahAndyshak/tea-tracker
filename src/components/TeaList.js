@@ -7,15 +7,15 @@ function TeaList(props){
     <React.Fragment>
       {props.teaList.map((tea) =>
       <Tea
-        whenTeaClicked = { props.onTeaSelection }
+        // whenTeaClicked = { props.onTeaSelection }
         name = {tea.name}
         origin = {tea.origin}
         caf = {tea.caf}
         price = {tea.price}
         inventory = {tea.inventory}
-        // onBuyTea = {props.onBuyTea}
-        // onRestockTea = {props.onRestockTea}
-        // onTeaSelect = {props.onTeaSelect}
+        onBuyTea = {props.onBuyTea}
+        onRestockTea = {props.onRestockTea}
+        onTeaSelect = {props.onTeaSelect}
         id = {tea.id}
         key = {tea.id} />
       )}
@@ -25,9 +25,9 @@ function TeaList(props){
 
 TeaList.propTypes = {
   teaList: PropTypes.array,
-  // onBuyTea: PropTypes.func,
-  // onRestockTea: PropTypes.func,
-  // onTeaSelct: PropTypes.func,
+  onBuyTea: PropTypes.func,
+  onRestockTea: PropTypes.func,
+  onTeaSelct: PropTypes.func,
   onTeaSelection: PropTypes.func
 }
 
