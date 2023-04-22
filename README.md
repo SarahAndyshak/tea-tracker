@@ -18,7 +18,8 @@
 * Bootstrap
 
 ## Mockup
-
+![splash page](TeaSplash.png)
+![details page](TeaDetails.png)
 
 ## Component Diagram
 ![diagram](tea-diagram.png)

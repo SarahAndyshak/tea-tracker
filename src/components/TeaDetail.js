@@ -8,10 +8,10 @@ function TeaDetail(props){
     <React.Fragment>
       <h1>Tea Details</h1>
       <h3>Name: {tea.name}</h3>
-      <p>Origin: {tea.origin}</p>
-      <p>Caf/Decaf: {tea.caf}</p>
-      <p>Price per oz: ${tea.price}</p>
-      <p>Inventory available in oz: {tea.inventory}</p>
+      <h5>Origin: {tea.origin}</h5>
+      <h5>Caf/Decaf: {tea.caf}</h5>
+      <h5>Price per oz: ${tea.price}</h5>
+      <h5>Inventory available in oz: {tea.inventory}</h5>
       <button className="btn btn-outline-success" onClick={ props.onClickingEdit }>Update inventory</button>
       <br />
       <button className="btn btn-outline-success" onClick={()=> onClickingDelete(tea.id) }>Delete this tea</button>

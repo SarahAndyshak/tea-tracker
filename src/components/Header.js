@@ -18,8 +18,8 @@ function Header(){
   return(
     <React.Fragment>
       <div style={headerStyles}>
-      <h1>Tea Tracker</h1>
-      <p>Keep track of shop inventory!</p>
+      <h1>Alpine Valley Teas</h1>
+      <h3>Est. 2023</h3>
       <hr />
       </div>
     </React.Fragment>

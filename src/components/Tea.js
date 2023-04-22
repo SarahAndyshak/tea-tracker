@@ -21,10 +21,10 @@ function Tea(props){
     teaDisplay = 
     <>
     <h3>Name: {props.name}</h3>
-    <p>Origin: {props.origin}</p>
-    <p>Caf/Decaf: {props.caf}</p>
-    <p>Price per oz: ${props.price}</p>
-    <p>Inventory available in oz: {props.inventory}</p>
+    <h5>Origin: {props.origin}</h5>
+    <h5>Caf/Decaf: {props.caf}</h5>
+    <h5>Price per oz: ${props.price}</h5>
+    <h5>Inventory available in oz: {props.inventory}</h5>
     <button className="btn btn-success" onClick={handleClick}>Buy: 1 oz</button>
     </>
   }
