@@ -55,7 +55,7 @@ git clone https://github.com/SarahAndyshak/tea-tracker.git
 
 ## Known Bugs
 
-* There's a bug with the incrementing function: the Restock button only increments by 130, as it should, but sometimes passes the "130" as a string, when the user clicks restock twice before buying an amount. The number on the dropdown are unnecessary.
+* As of 24 April 2023, bugs should be fixed. 
 
 ## License
 
