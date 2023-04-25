@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import Toast from 'react-bootstrap/Toast';
 
 function Tea(props){
 
@@ -11,7 +10,6 @@ function Tea(props){
   function handleSubmit(event) {
     event.preventDefault();
 // for use with number form
-    // console.log(event.target.inventory.value);
     // return props.onRestockTea(props.id, parseInt(event.target.inventory.value));
 // for use with button only
     return props.onRestockTea(props.id);
@@ -35,8 +33,6 @@ function Tea(props){
 
   return (
     <React.Fragment>
-      {/* <Toast className="mb-4">
-      <Toast.Header closeButton={false}> */}
       <div onClick={() => props.onTeaSelect(props.id)}>
       {teaDisplay}
       </div>
@@ -49,8 +45,6 @@ function Tea(props){
         <input type="number" required min="1" max="130" name="inventory" className="form-control" />
         <button className="btn btn-outline-success">Restock: new crate</button>
       </form> */}
-      {/* </Toast.Header>
-      </Toast> */}
     </React.Fragment>
   );
 }
