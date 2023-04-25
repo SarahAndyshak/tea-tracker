@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Toast from 'react-bootstrap/Toast';
+// import Toast from 'react-bootstrap/Toast';
 
 function Tea(props){
 
@@ -10,8 +10,11 @@ function Tea(props){
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(event.target.inventory.value);
-    return props.onRestockTea(props.id, parseInt(event.target.inventory.value));
+// for use with number form
+    // console.log(event.target.inventory.value);
+    // return props.onRestockTea(props.id, parseInt(event.target.inventory.value));
+// for use with button only
+    return props.onRestockTea(props.id);
   }
 
   let teaDisplay = null;
@@ -25,23 +28,29 @@ function Tea(props){
     <h5>Caf/Decaf: {props.caf}</h5>
     <h5>Price per oz: ${props.price}</h5>
     <h5>Inventory available in oz: {props.inventory}</h5>
-    <button className="btn btn-success" onClick={handleClick}>Buy: 1 oz</button>
+    {/* <button className="btn btn-success" onClick={handleClick}>Buy: 1 oz</button> */}
+    {/* moved to fix issue with showing details */}
     </>
   }
 
   return (
     <React.Fragment>
-      <Toast className="mb-4">
-      <Toast.Header closeButton={false}>
+      {/* <Toast className="mb-4">
+      <Toast.Header closeButton={false}> */}
       <div onClick={() => props.onTeaSelect(props.id)}>
       {teaDisplay}
       </div>
-      <form onSubmit={handleSubmit}>
-        <input type="number" min="1" max="130" name="inventory" className="form-control" />
+      <button className="btn btn-success" onClick={handleClick}>Buy: 1 oz</button>
+      <br /><br />
+      <button className="btn btn-success" onClick={handleSubmit}>Restock: 130 oz</button>
+
+{/* For use with form, didn't have the math logic correct */}
+      {/* <form onSubmit={handleSubmit}>
+        <input type="number" required min="1" max="130" name="inventory" className="form-control" />
         <button className="btn btn-outline-success">Restock: new crate</button>
-      </form>
-      </Toast.Header>
-      </Toast>
+      </form> */}
+      {/* </Toast.Header>
+      </Toast> */}
     </React.Fragment>
   );
 }

@@ -11,8 +11,8 @@ function EditTeaForm(props){
       name: event.target.name.value,
       origin: event.target.origin.value,
       caf: event.target.caf.value,
-      price: event.target.price.value,
-      inventory: event.target.inventory.value,
+      price: parseInt(event.target.price.value),
+      inventory: parseInt(event.target.inventory.value),
       id: tea.id
     });
   }
